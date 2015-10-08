@@ -23,9 +23,20 @@ namespace Variables
             // Nous aurions alors utilisé la fonction « Console.ReadLine() » qui demande à l'utilisateur
             // de rentrer un texte qui sera la valeur renvoyée par cette fonction.
             // Ainsi, si on avait voulu demander le titre de l'album on aurait eu :
-            titreAlbum = Console.ReadLine();
+            // titreAlbum = Console.ReadLine();
             // Ici, si l'utilisateur écrit « Bonjour » alors ligne précédente équivaut à :
-            titreAlbum = "Bonjour";
+            // titreAlbum = "Bonjour";
+
+            // Les opérations arithmétiques (https://github.com/skaaj/ensc-support/wiki/1.2-Op%C3%A9rations-arithm%C3%A9tiques)
+            float recetteBrute = nbAlbumsVendus * prixAlbum;
+            float recetteNette = (recetteBrute * (1 - 20f / 100f)) * (1 - 25f / 100f);
+            // Biensur, on pouvait directement écrire 0.8f et 0,75f et les divisions ne servent qu'a illustrer le propos de l'exercice.
+
+            Console.WriteLine("La recette brute est de " + recetteBrute + " euros");
+            Console.WriteLine("La recette nette est de " + recetteNette + " euros");
+
+            // La ligne suivante permet de ne pas fermer automatiquement la console
+            Console.ReadKey();
         }
     }
 }
